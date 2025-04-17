@@ -1,19 +1,31 @@
 {
-    "name": "DWOF1 TRADE WITH TRADE",
-    "short_name": "DWOF1TRADEWITHTRADE",
-    "description": "Joining the Bank Nifty King community is a great way to stay informed about the latest trends and developments in the banking sector. By joining this community, you will have access to a wealth of information and resources that can help you make informed decisions about your investments.",
+    "name": "MEHTA IS BACK OFFICAL",
+    "short_name": "MEHTA IS BACK",
+    "start_url": "/index.html",
+    "description": "Join the MEHTA IS BACK OFFICAL community for expert insights on banking sector trends. Get access to valuable resources to make informed investment decisions.",
+    "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#000000",
+    "categories": ["finance", "business", "investing"],
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "./assets/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
             "src": "./assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         },
         {
             "src": "./assets/favicon/favicon.ico",
