@@ -16,38 +16,19 @@ body{
   font-family: "TG", sans-serif;
 }
 
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* or whatever height you need */
-}
-
 .bg-video {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-}
-
-.bg-fallback {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('./assets/Images/fallback-bg.png');
-  background-size: cover;
   background-position: center;
-  z-index: 0;
-}
-
-/* Hide fallback when video is loaded */
-.bg-video.loaded + .bg-fallback {
-  display: none;
+  background: no-repeat;
+  z-index: -1;
 }
 
 .img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
@@ -58,7 +39,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 99;
   min-height: 50vh;
   display: flex;
   justify-content: center;
