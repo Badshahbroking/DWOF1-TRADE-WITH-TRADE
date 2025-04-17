@@ -26,9 +26,13 @@
   </head>
   <body>
     <!-- Video Section -->
-    <video preload="metadata" autoplay muted loop class="bg-video" loading="lazy">
-      <source src="./assets/Video/bg-video.mp4" type="video/mp4" />
-    </video>
+    <div class="video-container">
+      <video preload="metadata" autoplay muted loop class="bg-video" loading="lazy">
+        <source src="./assets/Video/bg-video.mp4" type="video/mp4" />
+      </video>
+      <!-- Fallback image -->
+      <div class="bg-fallback"></div>
+    </div>
     <!-- Card Section -->
     <div class="card">
       <img src="./assets/Images/img.png" alt="MEHTA IS BACK OFFICAL" class="img" />
@@ -48,7 +52,23 @@
     </footer>
   </body>
   <script>
+    // Update the year in the footer dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // video fallback for browsers that do not support video
+    document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.bg-video');
+
+    video.addEventListener('loadeddata', function() {
+    this.classList.add('loaded');
+    });
+
+    	// Fallback in case the video fails to load
+    setTimeout(function() {
+    if (!video.classList.contains('loaded')) {
+    video.classList.add('loaded');
+    }
+    	}, 3000); // 3 seconds timeout
+    });
   </script>
 </html>
